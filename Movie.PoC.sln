@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Domain", "Movie.Domain\Movie.Domain.csproj", "{67A7F681-2A40-49F4-BA6A-C24A91A9CCE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.DataAccess", "Movie.DataAccess\Movie.DataAccess.csproj", "{8B24BC5A-88D2-46F3-B314-F25F7D7E44A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.DataAccess.Test", "Movie.DataAccess.Test\Movie.DataAccess.Test.csproj", "{4A2AA554-E2A6-482D-90AE-27C9DE387C90}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

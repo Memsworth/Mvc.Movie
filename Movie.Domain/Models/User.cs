@@ -6,5 +6,6 @@ public class User
     public string Name { get; set; }
     public DateTime DateOfBirth { get; set; }
     public Role Role { get; set; }
+    public IEnumerable<Review>? Reviews { get; set; }
     
 }
