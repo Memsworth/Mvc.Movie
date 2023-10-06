@@ -9,7 +9,7 @@ public class MovieDbContext : DbContext
     { }
 
     public DbSet<User> Users { get; set; }
-    public DbSet<Domain.Models.Movie> Movies { get; set; }
+    public DbSet<Film> Films { get; set; }
     public DbSet<Review> Reviews { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

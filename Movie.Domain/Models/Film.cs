@@ -2,7 +2,7 @@
 
 namespace Movie.Domain.Models;
 
-public class Movie
+public class Film
 {
     public int Id { get; set; }
     public string? Title { get; set; }

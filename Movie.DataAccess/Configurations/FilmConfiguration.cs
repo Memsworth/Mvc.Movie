@@ -4,9 +4,9 @@ using Movie.Domain.Models;
 
 namespace Movie.DataAccess.Configurations;
 
-public class ReviewConfiguration : IEntityTypeConfiguration<Review>
+public class FilmConfiguration : IEntityTypeConfiguration<Film>
 {
-    public void Configure(EntityTypeBuilder<Review> builder)
+    public void Configure(EntityTypeBuilder<Film> builder)
     {
         throw new NotImplementedException();
     }
