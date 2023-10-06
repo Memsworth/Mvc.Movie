@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Movie.DataAccess.Configurations;
 using Movie.Domain.Models;
 
 namespace Movie.DataAccess;
@@ -14,5 +15,9 @@ public class MovieDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ApplyConfiguration(new UserConfiguration());
+        modelBuilder.ApplyConfiguration(new FilmConfiguration());
+        modelBuilder.ApplyConfiguration(new ReviewConfiguration());
+
     }
 }
