@@ -1,6 +1,8 @@
-﻿namespace Movie.Domain.Abstractions
+﻿using Movie.Domain.Models;
+
+namespace Movie.Domain.Abstractions
 {
-    internal interface IFilmRepository
+    internal interface IFilmRepository : IBaseRepository<Film>
     {
     }
 }

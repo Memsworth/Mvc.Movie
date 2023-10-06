@@ -1,6 +1,7 @@
 ﻿namespace Movie.Domain.Abstractions
 {
-    internal interface IBaseRepository
+    internal interface IBaseRepository<T> where T : class
     {
+        public Task<T> AddAsync(int id); 
     }
 }

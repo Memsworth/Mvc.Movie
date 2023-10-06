@@ -1,6 +1,8 @@
-﻿namespace Movie.Domain.Abstractions
+﻿using Movie.Domain.Models;
+
+namespace Movie.Domain.Abstractions
 {
-    internal interface IReviewRepository
+    internal interface IReviewRepository : IBaseRepository<Review>
     {
     }
 }
