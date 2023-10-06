@@ -3,19 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Domain", "Movie.Domain\Movie.Domain.csproj", "{67A7F681-2A40-49F4-BA6A-C24A91A9CCE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movie.Domain", "Movie.Domain\Movie.Domain.csproj", "{67A7F681-2A40-49F4-BA6A-C24A91A9CCE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.DataAccess", "Movie.DataAccess\Movie.DataAccess.csproj", "{8B24BC5A-88D2-46F3-B314-F25F7D7E44A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movie.DataAccess", "Movie.DataAccess\Movie.DataAccess.csproj", "{8B24BC5A-88D2-46F3-B314-F25F7D7E44A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.DataAccess.Test", "Movie.DataAccess.Test\Movie.DataAccess.Test.csproj", "{4A2AA554-E2A6-482D-90AE-27C9DE387C90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movie.DataAccess.Test", "Movie.DataAccess.Test\Movie.DataAccess.Test.csproj", "{4A2AA554-E2A6-482D-90AE-27C9DE387C90}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67A7F681-2A40-49F4-BA6A-C24A91A9CCE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A7F681-2A40-49F4-BA6A-C24A91A9CCE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A7F681-2A40-49F4-BA6A-C24A91A9CCE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A7F681-2A40-49F4-BA6A-C24A91A9CCE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B24BC5A-88D2-46F3-B314-F25F7D7E44A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B24BC5A-88D2-46F3-B314-F25F7D7E44A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B24BC5A-88D2-46F3-B314-F25F7D7E44A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B24BC5A-88D2-46F3-B314-F25F7D7E44A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A2AA554-E2A6-482D-90AE-27C9DE387C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2AA554-E2A6-482D-90AE-27C9DE387C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2AA554-E2A6-482D-90AE-27C9DE387C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2AA554-E2A6-482D-90AE-27C9DE387C90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4846F11-FAAD-4F17-A5E3-C8656AAC49E0}
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 	EndGlobalSection
 EndGlobal

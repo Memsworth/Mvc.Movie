@@ -11,6 +11,13 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Name).IsRequired();
         builder.Property(x => x.DateOfBirth).IsRequired();
-        builder.HasMany(x => x.Reviews).WithOne(x => x.User);
+        builder.Property(x => x.Email).IsRequired();
+        builder.Property(x=> x.Salt).IsRequired();
+        builder.Property(x => x.HashedPassowrd).IsRequired();
+        builder.Property(x=> x.Role).IsRequired().HasDefaultValue(Role.User);
+
+        builder.HasMany(user => user.Reviews).WithOne(review => review.User).HasForeignKey(review => review.UserId);
+        builder.HasIndex(user => user.Email).IsUnique();
+        builder.HasIndex(user => user.Salt).IsUnique();
     }
 }
