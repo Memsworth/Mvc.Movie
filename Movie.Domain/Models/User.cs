@@ -9,6 +9,6 @@ public class User
     public string Name { get; set; }
     public DateTime DateOfBirth { get; set; }
     public Role Role { get; set; }
-    public ICollection<Review>? Reviews { get; set; }
+    public virtual ICollection<Review>? Reviews { get; set; }
     
 }
