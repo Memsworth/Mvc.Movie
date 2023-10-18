@@ -1,7 +1,6 @@
 ﻿namespace Movie.Services
 {
-    internal class BaseServiceResponse
+    internal class AuthService
     {
-
     }
 }
