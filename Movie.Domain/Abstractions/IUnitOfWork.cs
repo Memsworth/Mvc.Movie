@@ -1,6 +1,6 @@
 ﻿namespace Movie.Domain.Abstractions
 {
-    internal interface IUnitOfWork
+    public interface IUnitOfWork
     {
         public IFilmRepository FilmRepository { get; }
         public IUserRepository UserRepository { get; }

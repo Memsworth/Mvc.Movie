@@ -8,6 +8,7 @@ public class User
     public byte[] Salt { get; set; }    
     public string Name { get; set; }
     public DateTime DateOfBirth { get; set; }
+    public DateTime CreatedDate { get; set; }
     public Role Role { get; set; }
     public virtual ICollection<Review>? Reviews { get; set; }
     

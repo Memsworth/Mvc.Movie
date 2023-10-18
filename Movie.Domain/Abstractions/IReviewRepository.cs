@@ -2,7 +2,7 @@
 
 namespace Movie.Domain.Abstractions
 {
-    internal interface IReviewRepository : IBaseRepository<Review>
+    public interface IReviewRepository : IBaseRepository<Review>
     {
     }
 }

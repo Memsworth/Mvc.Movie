@@ -2,7 +2,7 @@
 
 namespace Movie.Domain.Abstractions
 {
-    internal interface IFilmRepository : IBaseRepository<Film>
+    public interface IFilmRepository : IBaseRepository<Film>
     {
     }
 }
