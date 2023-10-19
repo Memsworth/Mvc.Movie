@@ -1,6 +1,11 @@
-﻿namespace Movie.Domain.Abstractions
+﻿using Movie.Domain.Models;
+
+namespace Movie.Domain.Abstractions
 {
-    internal interface IAuthService
+    public interface IAuthService
     {
+
+        public Task<BaseServiceResponse> Login(UserLogin userLogin);
+        public Task<BaseServiceResponse> Register(UserRegistration userRegistration);
     }
 }

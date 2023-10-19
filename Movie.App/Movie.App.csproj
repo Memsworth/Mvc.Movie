@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Movie.Services\Movie.Services.csproj" />
+    <Folder Include="Views\Film\" />
+    <Folder Include="Views\User\" />
+    <Folder Include="Views\Review\" />
   </ItemGroup>
 
 </Project>
