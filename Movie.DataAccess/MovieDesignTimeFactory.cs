@@ -7,10 +7,7 @@ public class MovieDesignTimeFactory : IDesignTimeDbContextFactory<MovieDbContext
 {
     public MovieDbContext CreateDbContext(string[] args)
     {
-        var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        var dbPath = Path.Join(folderPath, "Movie.db");
-
         var optionBuilder = new DbContextOptionsBuilder<MovieDbContext>();
-        optionBuilder.UseSqlite($"Data Source={dbPath}");   
+        optionBuilder.UseSqlite($"Data Source=Movie.db");   
         return new MovieDbContext(optionBuilder.Options);    }
 }
