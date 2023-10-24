@@ -1,4 +1,5 @@
-﻿using Movie.Domain.Abstractions;
+﻿using BCrypt.Net;
+using Movie.Domain.Abstractions;
 using Movie.Domain.Models;
 using Movie.Domain.Models.Dtos;
 
@@ -16,19 +17,22 @@ namespace Movie.Services
 
         public async Task Register(RegistrationDto userRegistration)
         {
-            if (userRegistration is not null)
-            {
-                await _unitOfWork.UserRepository.AddAsync(new User
-                {
-                    Email = userRegistration.Email,
-                    HashedPassowrd = userRegistration.Password,
-                    Name = userRegistration.Name,
-                    DateOfBirth = userRegistration.DateOfBirth,
-                    CreatedDate = DateTime.Now,
-                    Role = Role.User
-                });
-            }
+            //fix this later
+            if (userRegistration is null) throw new Exception("registration is null");
+
+            var user = (await _unitOfWork.UserRepository.GetAsync()).FirstOrDefault(x => x.Email == userRegistration.Email.ToLower());
+
+            if (user is not null) throw new Exception("Username or email is already in use");
             
+            await _unitOfWork.UserRepository.AddAsync(new User
+            {
+                Email = userRegistration.Email.ToLower(),
+                HashedPassowrd = BCrypt.Net.BCrypt.HashPassword(userRegistration.Password),
+                Name = userRegistration.Name,
+                DateOfBirth = userRegistration.DateOfBirth,
+                CreatedDate = DateTime.Now,
+                Role = Role.User
+            });
         }
     }
 }

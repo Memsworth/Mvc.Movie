@@ -1,8 +1,7 @@
 ﻿namespace Movie.Domain.Models;
 
-public class Review
+public class Review : BaseEntity
 {
-    public int Id { get; set; }
     public string ReviewText { get; set; }
     public int Rating { get; set; }
     public int UserId { get; set; }

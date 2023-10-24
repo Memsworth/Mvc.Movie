@@ -2,9 +2,8 @@
 
 namespace Movie.Domain.Models;
 
-public class Film
+public class Film : BaseEntity
 {
-    public int Id { get; set; }
     public string? Title { get; set; }
     public string? ImageUrl { get; set; }
     
