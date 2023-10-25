@@ -15,13 +15,14 @@ namespace Movie.App.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (Registration is not null && ModelState.IsValid)
+            if (Registration is null || !ModelState.IsValid)
             {
-                await _authService.Register(Registration);
-                return RedirectToPage("./Index");
+                return BadRequest(ModelState);
             }
 
-            return RedirectToPage("./Error");
+            await _authService.Register(Registration);
+            return RedirectToPage("./Index");
+
         }
         public void OnGet()
         {
