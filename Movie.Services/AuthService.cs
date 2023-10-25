@@ -1,5 +1,4 @@
-﻿using BCrypt.Net;
-using Movie.Domain.Abstractions;
+﻿using Movie.Domain.Abstractions;
 using Movie.Domain.Models;
 using Movie.Domain.Models.Dtos;
 
@@ -33,6 +32,8 @@ namespace Movie.Services
                 CreatedDate = DateTime.Now,
                 Role = Role.User
             });
+
+            await _unitOfWork.CommitAsync();
         }
     }
 }

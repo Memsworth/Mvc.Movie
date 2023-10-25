@@ -12,12 +12,10 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(x => x.Name).IsRequired();
         builder.Property(x => x.DateOfBirth).IsRequired();
         builder.Property(x => x.Email).IsRequired();
-        builder.Property(x=> x.Salt).IsRequired();
         builder.Property(x => x.HashedPassowrd).IsRequired();
         builder.Property(x=> x.Role).IsRequired().HasDefaultValue(Role.User);
 
-        builder.HasMany(user => user.Reviews).WithOne(review => review.User).HasForeignKey(review => review.UserId);
+        builder.HasMany(user => user.Reviews).WithOne(review => review.User).HasForeignKey(review => review.UserId).OnDelete(DeleteBehavior.Cascade);
         builder.HasIndex(user => user.Email).IsUnique();
-        builder.HasIndex(user => user.Salt).IsUnique();
     }
 }

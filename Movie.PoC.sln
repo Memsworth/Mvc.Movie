@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movie.Services.Test", "Movi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movie.App.Test", "Movie.App.Test\Movie.App.Test.csproj", "{6BDDBB6E-3C2C-459B-B483-0B34E1ED55D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.App", "Movie.App\Movie.App.csproj", "{4A2EB152-A78B-431A-B50D-D5458C35BD8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movie.App", "Movie.App\Movie.App.csproj", "{4A2EB152-A78B-431A-B50D-D5458C35BD8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -14,6 +14,6 @@ public class FilmConfiguration : IEntityTypeConfiguration<Film>
         builder.Property(f => f.ReleaseDate).IsRequired();
         builder.Property(f => f.Genre).IsRequired();
 
-        builder.HasMany(f => f.Reviews).WithOne(r => r.Film).HasForeignKey(r => r.FilmId);
+        builder.HasMany(f => f.Reviews).WithOne(r => r.Film).HasForeignKey(r => r.FilmId).OnDelete(DeleteBehavior.Cascade);
     }
 }

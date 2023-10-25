@@ -12,6 +12,9 @@ public class ReviewConfiguration : IEntityTypeConfiguration<Review>
         builder.Property(review => review.ReviewText).IsRequired();
         builder.Property(review => review.Rating).IsRequired();
 
-        builder.HasOne(r => r.User).WithOne().HasForeignKey<Review>(r => r.FilmId).IsRequired().OnDelete(DeleteBehavior.Cascade);
+        builder.HasIndex(review => new { review.UserId, review.FilmId }).IsUnique();
+
+        builder.HasOne(r => r.User).WithMany(u => u.Reviews).HasForeignKey(r => r.UserId);
+        builder.HasOne(r => r.Film).WithMany(f => f.Reviews).HasForeignKey(r => r.FilmId);
     }
 }
