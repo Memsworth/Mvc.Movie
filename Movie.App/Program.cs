@@ -14,9 +14,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IFilmRepository, FilmRepository>();
 builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
-
 builder.Services.AddScoped<IAuthService, AuthService>();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

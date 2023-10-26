@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Movie.DataAccess.Dtos
+namespace Movie.Domain.Dtos
 {
-    public class RegistrationDto : LoginDto
+    public class RegistrationDto: LoginDto
     {
         [Required]
         [RegularExpression("^[a-zA-Z ]+$", ErrorMessage = "Name should only contain letters and spaces")]

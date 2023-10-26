@@ -1,11 +1,9 @@
-﻿using Movie.DataAccess.CustomValidations;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace Movie.DataAccess.Dtos
+namespace Movie.Domain.Dtos
 {
     public class LoginDto
     {
-        [UniqueEmail(ErrorMessage = "Email is already in use.")]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         [Required]
         public string Email { get; set; }

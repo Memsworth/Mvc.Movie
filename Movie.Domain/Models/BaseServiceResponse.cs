@@ -1,15 +1,16 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 
 namespace Movie.Domain.Models
 {
     public class BaseServiceResponse
     {
         public string Message { get; set; }
-        public HttpStatusCode StatusCode { get; set; }
 
-        public BaseServiceResponse(HttpStatusCode statusCode, string message)
+        public BaseServiceResponse() { }
+
+        public BaseServiceResponse(string message)
         {
-            StatusCode = statusCode;
             Message = message;
         }
     }
@@ -19,13 +20,18 @@ namespace Movie.Domain.Models
     {
         public T Data { get; set; }
 
-        public BaseServiceResponse(HttpStatusCode statusCode, string message) : base(statusCode, message)
+        public BaseServiceResponse(string message) : base(message)
         {
         }
 
-        public BaseServiceResponse(T data, HttpStatusCode statusCode, string message) : base(statusCode, message)
+        public BaseServiceResponse(T data, string message) : base(message)
         {
             Data = data;
         }
+
+        public BaseServiceResponse()
+        {
+        }
     }
+
 }

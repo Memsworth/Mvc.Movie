@@ -1,14 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Movie.Domain.Abstractions;
-using Movie.Domain.Models.Dtos;
+using Movie.Domain.Dtos;
+using Movie.Services;
 
 namespace Movie.App.Pages
 {
     public class RegistrationModel : PageModel
     {
-        private readonly IAuthService _authService;
-        public RegistrationModel(IAuthService authService) => _authService = authService;
+        private readonly AuthService _authService;
+        public RegistrationModel(AuthService authService) => _authService = authService;
 
         [BindProperty]
         public RegistrationDto Registration { get; set; }
